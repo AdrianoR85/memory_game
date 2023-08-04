@@ -1,0 +1,39 @@
+.score__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20rem;
+  margin: 1rem;
+}
+
+.score__container span {
+  display: block;
+  text-align: center;
+}
+
+.score__container .score__player {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.score__container .score__point {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.score__container .active {
+  color: green;
+}
+
+@media screen and (max-width: 600px) {
+  .score__container {
+    gap: 5rem;
+    margin: 0rem 0rem .4rem;
+  }
+
+  .score__container .score__player {
+    font-size: 1.4rem;
+  }
+  .score__container .score__point {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,39 @@
+button {
+  border: none;
+  padding: .8rem 1rem;
+  border-radius: .4rem;
+  background-color: #3535f3;
+  font-size: 1.6rem;
+  outline: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform ease-in-out 0.2s;
+  box-shadow: .2rem .2rem .2rem #00000086;
+}
+button::before {
+  content: 'New Game';
+}
+
+button:hover {
+  transform: scale(.95);
+}
+
+@media screen and (max-width: 600px) {
+  button {
+    position: absolute;
+    top:1rem;
+    left:1rem;
+    height: 4rem;
+    width: 4rem;
+    font-size: 1.4rem;
+
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  button::before {
+    content: 'New';
+  }
+}

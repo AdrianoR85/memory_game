@@ -1,0 +1,83 @@
+.card {
+  position: relative;
+  /* perspective: 1000px; */
+  transform-style: preserve-3d;
+}
+
+.pokemon, .back {
+  width: 12rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  box-shadow: 0 .3rem 1.5rem rgba(100, 100, 100, 0.5);
+  margin: 1rem;
+  backface-visibility: hidden;
+  transition: transform .4s;
+}
+
+.pokemon{
+  padding: 2rem;
+  text-align: center;
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(0);
+}
+
+.on {
+  transform: rotateY(0deg);
+}
+
+.off {
+  transform: rotateY(180deg);
+}
+
+.pokemon__image {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  width: 9rem;
+  height: 9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon__image img {
+  max-width: 100%;
+}
+
+.pokemon__name {
+  margin-top: 2rem;
+}
+
+.pokemon__name .name {
+  letter-spacing: .1rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .back {
+    background: linear-gradient(to right, #efefbb, #d4d3dd);
+  }
+
+  .pokemon__name {
+    display: none;
+  }
+
+  .pokemon, .back, .pokemon__image {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+  }
+
+  .pokemon__image {
+    background-size: contain;
+  }
+
+}
